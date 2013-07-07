@@ -4,17 +4,16 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
 
-  var myfile = 'index.html';
-  var mybuffer = new buffer(256); 
-  var mydata;
+  var myFile = 'index.html';
+  var myBuffer = new Buffer(256); 
 
   fs.readFileSync(myfile, function(error, data) {
     if(error) {
 	throw error;
     }
-  mydata=data;
+  myData=myBuffer(data,0);
   });
-  response.send(mydata);
+  response.send(myBuffer.toString('utf8',0,myData));
   
 });
 
