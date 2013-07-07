@@ -5,15 +5,15 @@ var fs = require('fs');
 app.get('/', function(request, response) {
 
   var myFile = 'index.html';
-  var myBuffer = new Buffer(256); 
+  var buf = new Buffer(256); 
 
   fs.readFileSync(myFile, function(error, data) {
     if(error) {
 	throw error;
     }
-  myData=myBuffer(data,0);
+  myData=buf.toString(data);
   });
-  response.send(myBuffer.toString('utf8',0,myData));
+  response.send(myData);
   
 });
 
