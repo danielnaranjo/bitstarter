@@ -6,16 +6,14 @@ app.get('/', function(request, response) {
 
   var myFile = 'index.html';
   var myBuffer = new Buffer(256); 
-  var myData;
 
   fs.readFileSync(myFile, function(error, data) {
     if(error) {
 	throw error;
     }
-  //myData=data;
-  myBuffer = myBuffer.write(myData,256);
+    myData = myBuffer(data,0);
   });
-  response.send(myBuffer.toString("utf-8"));
+  response.send(myBuffer.toString('utf-8',0,myData));
 
 });
 
