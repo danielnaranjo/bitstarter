@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
   var myFile = 'index.html';
   var myBuffer = new Buffer(256); 
 
-  fs.readFileSync(myfile, function(error, data) {
+  fs.readFileSync(myFile, function(error, data) {
     if(error) {
 	throw error;
     }
