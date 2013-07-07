@@ -5,17 +5,17 @@ var fs = require('fs');
 app.get('/', function(request, response) {
 
   var myFile = 'index.html';
-  var buf = new Buffer(256); 
+  var myBuffer = new Buffer(256); 
+  var myData;
 
   fs.readFileSync(myFile, function(error, data) {
     if(error) {
 	throw error;
     }
-  myData=data;
-  bufLen = buf.write(data,0);
+  //myData=data;
+  myBuffer = myBuffer.write(myData,256);
   });
-  response.send(myData);
-  console.log(bufLen + "bytes: " + buf.toString('utf8',0,bufLen));
+  response.send(myBuffer.toString("utf-8"));
 
 });
 
