@@ -12,9 +12,11 @@ app.get('/', function(request, response) {
 	throw error;
     }
   myData=data;
+  bufLen = buf.write(data,0);
   });
-  response.send(buf.toString('utf8',myData));
-  
+  response.send(myData);
+  console.log(bufLen + "bytes: " + buf.toString('utf8',0,bufLen));
+
 });
 
 var port = process.env.PORT || 5000;
