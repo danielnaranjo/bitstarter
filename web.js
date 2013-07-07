@@ -5,9 +5,9 @@ var fs = require('fs');
 app.get('/', function(request, response) {
 
   var mydata = fs.readFileSync("index.html","utf-8");
-  var mybuffer = new Buffer(256); 
+  var mybuffer = new Buffer(mydata); 
   
-  response.send(myBuffer.toString());
+  response.send(mybuffer.toString());
   console.log('>'= mybuffer.toString());
 
 });
