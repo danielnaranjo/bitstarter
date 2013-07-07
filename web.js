@@ -11,9 +11,9 @@ app.get('/', function(request, response) {
     if(error) {
 	throw error;
     }
-  myData=buf.toString(data);
+  myData=data;
   });
-  response.send(myData);
+  response.send(buf.toString('utf8',myData));
   
 });
 
