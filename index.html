@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>Around Me | geolocates micro-ads</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <!--<link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup/code/bootstrap-2.3.2.css">-->
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://loultimoenlaweb.com/cs184/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://loultimoenlaweb.com/cs184/social-buttons.css">
+    <script src="https://d396qusza40orc.cloudfront.net/startup/code/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <style>
@@ -24,6 +25,9 @@
         }
       }
       @media (max-width: 480px) {
+        .actions {
+          margin: 10px 0 0 0;
+        }
         .copy {
           padding: 2.5% 10%;
         }
@@ -57,7 +61,8 @@
         padding: 2% 0;
       }
       .actions {
-        background-color: #343434;
+        background-color: #4DA6FF;
+        border-radius: 10px;
         padding: 3% 0;
       }
       .video,
@@ -88,6 +93,32 @@
       .footer a {
         color: #ccf;
       }
+      /* my tags' colors */
+      .azul, .verde, .naranja {
+        border-radius: 3px;
+        color: #FFF;
+        padding: 1px 5px;
+      }
+      .azul:hover, .verde:hover, .naranja:hover {
+        cursor: pointer;
+        opacity: .9;
+      }
+      .azul {
+        background-color: blue;
+      }
+      .verde {
+        background-color: green;
+      }
+      .naranja {
+        background-color: orange;
+      }
+      .accordion-toggle, .accordion-toggle:hover  {
+        color: #60BCFF;
+      }
+      img {
+        border: 0;
+        border-radius: 10px;
+      }
     </style>
   </head>
 
@@ -101,12 +132,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">Around Me</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li><a href="#faq">FAQ</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -118,19 +150,21 @@
       
       <div class="row-fliud heading">
         <div class="span12">
-          <h1>Product</h1>
+          <h1>Around Me</h1>
         </div>
       </div><!-- heading -->
 
       <div class="row-fliud subheading">
         <div class="span12">
-          <p class="lead">One Sentence description</p>
+          <p class="lead">Find services, buy and sell your stuff with geolocates micro-ads</p>
         </div>
       </div><!-- subheading -->
 
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300" alt="">
+          <a data-toggle="modal" href="#uno">
+            <img class="img-polaroid" src="http://loultimoenlaweb.com/cs184/1b.jpg" alt="">
+          </a>
         </div><!-- video -->
 
         <div class="span5 actions">
@@ -179,12 +213,14 @@
 
       <div class="row-fluid section1">
           <div class="span5 offset1 asset">
-            <img class="img-polaroid" src="http://placehold.it/480x300" alt="">
+            <a href="#dos" data-toggle="modal" >
+              <img class="img-polaroid" src="http://loultimoenlaweb.com/cs184/2b.jpg" alt="">
+            </a>
           </div><!-- asset -->
           
           <div class="span5 copy">
             <p>
-              You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.
+              <strong>Around Me</strong> uses your phone's internal GPS or your Web browsers geolocations settings (Google Chrome, Firefox and IE 9+) to find services, post a micro ads to buy and sell your stuff. <br><br>We use the same principle of traditional classified ads of newspapers and took them to new technologies, focusing on mobile devices (smartphones or tablets), but improving the user experience and simplifying searches for websites that offer additional services such as Craigslist, eBay, OLX etc.
             </p>
           </div>
       </div><!-- section1 -->
@@ -192,39 +228,89 @@
       <div class="row-fluid section2">          
           <div class="span5 offset1 copy copy-rigth">
             <p>
-              You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.
+              <strong>Around Me</strong> search engine and publication is global, your ad would be available within a radius of 20km or 20 miles, however, you can modify the search global ads to show.<br><br><strong>Around Me</strong> search engine focuses on the location of the user to display the results of the searches and and you can use tags labels for improvement the results. No matter if you are in Paris or Buenos Aires, you can find your stuff in a simple and fast way to do it..
             </p>
           </div>
           <div class="span5 asset">
-            <img class="img-polaroid" src="http://placehold.it/480x300" alt="">
+            <a href="#tres" data-toggle="modal" >
+              <img class="img-polaroid" src="http://loultimoenlaweb.com/cs184/3b.jpg" alt="">
+            </a>
           </div><!-- asset -->
       </div><!-- section2 -->
 
-      <div class="row-fluid faq">
+      <div class="row-fluid faq" id="faq">
         <div class="span10 offset1">
           <h3>FAQ</h3>
           <div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                  What does FAQ stand for?
+                  What does "Around Me" works?
                 </a>
               </div>
               <div id="collapseOne" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  Frequently Asked Question.
+                  Around Me uses your phone's internal GPS or your Web browsers geolocations settings (Google Chrome, Firefox and IE 9+) to find services, post a micro ads to buy and sell your stuff. We use the same principle of traditional classified ads of newspapers and took them to new technologies, focusing on mobile devices (smartphones or tablets), but improving the user experience and simplifying searches for websites that offer additional services such as Craigslist, eBay, OLX etc.
                 </div>
               </div>
             </div>
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  What's a Frequently Asked Question?
+                  What makes us different from Craiglist or others?
                 </a>
               </div>
               <div id="collapseTwo" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  A question which is commnly asked by users.
+                  Our search engine focuses on the location of the user to display the results of the searches and category labels for improvement, ie If you are in New York City or San Francisco Bay, you can find a new office just make a search: Pizza in New York or office in Mountain View for startup. This will allow you to filter your results by: <span class="naranja">mountain view</span>, <span class="azul">office</span>, <span class="verde">start up</span>.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                  My privacy is important, I'm exposed to some type of fraud or other crime?
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  We have thought of almost everything, and we have implemented a verified user system to meet our users and we primarily use the data entered in the Facebook and Twitter profiles to validate credentials and users, so you'll know who you're doing business.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                  Any costs of publication of ads?
+                </a>
+              </div>
+              <div id="collapseFour" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Yes of course, there are costs of maintaining our platform (servers, domains, programmers, etc.), however, publication costs are so low that everybody will be able to publish your ads for unlimited time and pay from any device through cards credit, paypal or others.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                  I am a backer of the project, Should pay for my ads?
+                </a>
+              </div>
+              <div id="collapseSix" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Not necessarily, since you are an important part of this project all you want to publish ads will be free for unlimited time, also, to have all added values ​​such as "verified user", photos, featured listings as well as any other value to be added in the future to "Around Me".
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                  There are limitations to the results of "Around Me"?
+                </a>
+              </div>
+              <div id="collapseFive" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Our search engine and publication is global, your ad would be available within a radius of 20km or 20 miles, however, you can modify the search global ads to show.
                 </div>
               </div>
             </div>
@@ -239,6 +325,47 @@
       </div><!-- footer -->
 
     </div><!-- container -->
+
+    <!-- Modal -->
+    <div class="modal" style="display:none;" id="uno">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Preview</h4>
+          </div>
+          <div class="modal-body">
+            <img alt="Preview" src="http://loultimoenlaweb.com/cs184/1.jpg">
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal" style="display:none;" id="dos">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Preview</h4>
+          </div>
+          <div class="modal-body">
+            <img alt="Preview" src="http://loultimoenlaweb.com/cs184/2.jpg">
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal" style="display:none;" id="tres">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Preview</h4>
+          </div>
+          <div class="modal-body">
+            <img alt="Preview" src="http://loultimoenlaweb.com/cs184/3.jpg">
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
   </body>
 </html>
